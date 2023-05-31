@@ -1,12 +1,13 @@
 const express = require('express');
 const axios = require('axios');
-
+const cors = require('cors');
 const app = express();
 const port = 3000;
 
 const apiKey = 'YOUR_API_KEY'; // Replace with your Alpha Vantage API key
 
 app.use(express.json());
+app.use(cors());
 
 
 app.post('/stocks', async (req, res) => {
